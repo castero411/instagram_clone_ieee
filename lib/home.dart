@@ -29,7 +29,7 @@ class _homeState extends State<home> {
       ),
 
 
-      backgroundColor: Color.fromRGBO(51,51,51,1),
+      backgroundColor: Color.fromRGBO(51,51,51,.5),
     );
   }
 }
