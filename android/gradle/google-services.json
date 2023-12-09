@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "618729994359",
+    "project_id": "ieee-mobile-project-adc08",
+    "storage_bucket": "ieee-mobile-project-adc08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618729994359:android:f5f49fa92ece2673e3ae72",
+        "android_client_info": {
+          "package_name": "com.example.instagram_clone_ieee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZV-5DenUuykliqkDlMrA6GSYnOka1YIY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
