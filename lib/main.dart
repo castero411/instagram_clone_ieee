@@ -47,7 +47,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-        home:login_page(),//TODO change it to login
+        home:FirebaseAuth.instance.currentUser==null? login_page() : home_page(),//TODO change it to login
         title: "The page",
         debugShowCheckedModeBanner: false,
 
