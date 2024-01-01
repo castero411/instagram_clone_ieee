@@ -30,16 +30,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState(){
-    FirebaseAuth.instance.authStateChanges().listen((User? user){
-      if(user == null){
-        print("User is currently signed out!");
-        index=0;
-      }
-      else{
-        print("user is currently signed in!");
-        index=1;
-      }
-    });
+    FirebaseAuth.instance.authStateChanges().listen((User? user){});
 
     super.initState();
   }
@@ -47,7 +38,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-        home:login_page(),//TODO change it to login
+        home:home_page(),//TODO change it to login
         title: "The page",
         debugShowCheckedModeBanner: false,
 

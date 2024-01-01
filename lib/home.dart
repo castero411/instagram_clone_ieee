@@ -1,5 +1,3 @@
-import 'dart:io';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class home extends StatefulWidget {
@@ -15,7 +13,7 @@ class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(backgroundColor: Color.fromRGBO(51,51,51,1),
+      appBar: AppBar(backgroundColor: const Color.fromRGBO(51,51,51,1),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -29,7 +27,7 @@ class _homeState extends State<home> {
       ),
 
 
-      backgroundColor: Color.fromRGBO(51,51,51,.5),
+      backgroundColor: const Color.fromRGBO(51,51,51,.5),
     );
   }
 }

@@ -18,15 +18,15 @@ class _home_pageState extends State<home_page> {
 
   @override
   List <Widget> widgets = [
-    home(),
-    search_page(),
-    profile_page(),
+    const home(),
+    const search_page(),
+    const profile_page(),
   ];
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
 
-        backgroundColor: Color.fromRGBO(51,51,51,1),
+        backgroundColor: const Color.fromRGBO(51,51,51,1),
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey,
 
@@ -61,8 +61,8 @@ class _home_pageState extends State<home_page> {
         showUnselectedLabels: false ,
 
       ),
-      body: IndexedStack(children: widgets,index: currentState,),
-      backgroundColor: Color.fromRGBO(51,51,51,1),
+      body: IndexedStack(index: currentState,children: widgets,),
+      backgroundColor: const Color.fromRGBO(51,51,51,1),
 
     );
   }

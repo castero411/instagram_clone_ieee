@@ -42,25 +42,28 @@ class _register_pageState extends State<register_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
         child: ListView(
           children: [
 
 
-            SizedBox(height: 60) ,
+            const SizedBox(height: 60) ,
             Image.asset("assets/text_logo.png",height: 100,),
-            SizedBox(height: 30,),
+            const SizedBox(height: 30,),
 
             Container(
-                child: Text("Sign up to save photos and videos\nfrom your friends.",style:TextStyle(fontSize: 16,color: Color.fromRGBO(170, 170,170, 1)),textAlign: TextAlign.center,),
                 alignment: Alignment.center,
+                child: const Text("Sign up to save photos and videos\nfrom your friends.",style:TextStyle(fontSize: 16,color: Color.fromRGBO(170, 170,170, 1)),textAlign: TextAlign.center,),
             ),
-            SizedBox(height: 30,),
+            const SizedBox(height: 30,),
 
             Container(
+              margin: const EdgeInsets.only(left:30,right:30),
               child: TextFormField(
-                style: TextStyle(fontSize: 17,color: Colors.white,height: 1),
-                decoration: InputDecoration(
+                style: const TextStyle(fontSize: 17,color: Colors.white,height: 1),
+                decoration: const InputDecoration(
                   focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Color.fromRGBO(110, 110, 110, 1))),
                   hintText: "Email Address",
                   hintStyle: TextStyle(color: Color.fromRGBO(90,90,90,1)),
@@ -71,15 +74,15 @@ class _register_pageState extends State<register_page> {
                 ),
                 controller: email,
               ),
-              margin: EdgeInsets.only(left:30,right:30),
             ),
 
 
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Container(
+              margin: const EdgeInsets.only(left:30,right:30),
               child: TextFormField(
-                style: TextStyle(fontSize: 17,color: Colors.white,height: 1),
-                decoration: InputDecoration(
+                style: const TextStyle(fontSize: 17,color: Colors.white,height: 1),
+                decoration: const InputDecoration(
                   focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Color.fromRGBO(110, 110, 110, 1))),
                   hintText: "Password",
                   hintStyle: TextStyle(color: Color.fromRGBO(90,90,90,1)),
@@ -90,25 +93,26 @@ class _register_pageState extends State<register_page> {
                 ),
                 controller: password,
               ),
-              margin: EdgeInsets.only(left:30,right:30),
             ),
-            SizedBox(height: 60,),
+            const SizedBox(height: 60,),
             Container(
+              height: 40,
+              margin: const EdgeInsets.only(left:30,right: 30),
               child: MaterialButton(onPressed: (){
                 setState(() {
                   register();
                 });
-              },color: Color.fromRGBO(35, 154, 246, 1.0),
-                child: Text("Sign Up"),textColor: Colors.white,),
-              height: 40,
-              margin: EdgeInsets.only(left:30,right: 30),
+              },color: const Color.fromRGBO(35, 154, 246, 1.0),
+                child: const Text("Sign Up"),textColor: Colors.white,),
             ),
-            SizedBox(height: 200,),
-            Divider(height: 60,color: Color.fromRGBO(140,140,140,1),),
+            const SizedBox(height: 200,),
+            const Divider(height: 60,color: Color.fromRGBO(140,140,140,1),),
 
             Container(
+              margin: const EdgeInsets.only(right: 30,left: 30),
+              alignment: Alignment.center,
               child: InkWell(
-                child: Text.rich(TextSpan (children:[
+                child: const Text.rich(TextSpan (children:[
                   TextSpan(text: "Have account?  ",style: TextStyle(color: Colors.white)),
                   TextSpan(text: "Log In", style: TextStyle(color: Color.fromRGBO(35, 154, 246, 1.0))),
                 ],
@@ -120,13 +124,11 @@ class _register_pageState extends State<register_page> {
                             });
                     },
               ),
-              margin: EdgeInsets.only(right: 30,left: 30),
-              alignment: Alignment.center,
             ),
           ],
         ),
       ),
-      backgroundColor: Color.fromRGBO(51,51,51,1),
+      backgroundColor: const Color.fromRGBO(51,51,51,1),
     );
   }
 }

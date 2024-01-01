@@ -59,18 +59,19 @@ class _login_pageState extends State<login_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SizedBox(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: ListView(
             children: [
-              SizedBox(height: 130) ,
+              const SizedBox(height: 130) ,
               Image.asset("assets/text_logo.png",height: 100,),
-              SizedBox(height: 30,),
+              const SizedBox(height: 30,),
               Container(
+                margin: const EdgeInsets.only(left:30,right:30),
                 child: TextFormField(
-                  style: TextStyle(fontSize: 17,color: Colors.white,height: 1),
-                  decoration: InputDecoration(
+                  style: const TextStyle(fontSize: 17,color: Colors.white,height: 1),
+                  decoration: const InputDecoration(
                     focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Color.fromRGBO(110, 110, 110, 1))),
                     hintText: "Email Address",
                     hintStyle: TextStyle(color: Color.fromRGBO(90,90,90,1)),
@@ -84,13 +85,13 @@ class _login_pageState extends State<login_page> {
                   });},
                   controller: usernameEmail ,
                 ),
-                margin: EdgeInsets.only(left:30,right:30),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Container(
+                margin: const EdgeInsets.only(left:30,right:30),
                 child: TextFormField(
-                  style: TextStyle(fontSize: 17,color: Colors.white,height: 1),
-                  decoration: InputDecoration(
+                  style: const TextStyle(fontSize: 17,color: Colors.white,height: 1),
+                  decoration: const InputDecoration(
                     focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Color.fromRGBO(110, 110, 110, 1))),
                     hintText: "Password",
                     hintStyle: TextStyle(color: Color.fromRGBO(90,90,90,1)),
@@ -106,40 +107,39 @@ class _login_pageState extends State<login_page> {
                   controller: password,
                   obscureText: true,
                 ),
-                margin: EdgeInsets.only(left:30,right:30),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Container(
-                child: Text("Forgotten password?",style: TextStyle(color: Color.fromRGBO(
+                margin: const EdgeInsets.only(right:32),
+                child: const Text("Forgotten password?",style: TextStyle(color: Color.fromRGBO(
                     35, 154, 246, 1.0),fontSize: 15 ),textAlign: TextAlign.right ,  ),
-                margin: EdgeInsets.only(right:32),
               ),
-              SizedBox(height: 15,),
+              const SizedBox(height: 15,),
               Container(
-                child: Text(error,textAlign: TextAlign.center,style: TextStyle(fontSize: 15,color: Colors.red),),
                 alignment: Alignment.center,
+                child: Text(error,textAlign: TextAlign.center,style: const TextStyle(fontSize: 15,color: Colors.red),),
               ),
-              SizedBox(height: 15,),
+              const SizedBox(height: 15,),
               Container(
-                child: MaterialButton(onPressed: (){login();},
-                  color: Color.fromRGBO(35, 154, 246, 1.0),
-                child: Text("Log In"),textColor: Colors.white,),
                 height: 40,
-                margin: EdgeInsets.only(left:30,right: 30),
+                margin: const EdgeInsets.only(left:30,right: 30),
+                child: MaterialButton(onPressed: (){login();},
+                  color: const Color.fromRGBO(35, 154, 246, 1.0),textColor: Colors.white,
+                child: const Text("Log In"),),
               ),
-              SizedBox(height: 160,),
-              Divider(height: 80,color: Color.fromRGBO(140,140,140,1),),
+              const SizedBox(height: 160,),
+              const Divider(height: 80,color: Color.fromRGBO(140,140,140,1),),
 
                 InkWell(
                   child: Container(
-                    child: Text.rich(TextSpan (children:[
+                    margin: const EdgeInsets.only(right: 30,left: 30),
+                    alignment: Alignment.center,
+                    child: const Text.rich(TextSpan (children:[
                       TextSpan(text: "Don't have account?  ",style: TextStyle(color: Colors.white)),
                       TextSpan(text: "Sign Up", style: TextStyle(color: Color.fromRGBO(35, 154, 246, 1.0)),),
                         ],
                     ),
                     ),
-                    margin: EdgeInsets.only(right: 30,left: 30),
-                    alignment: Alignment.center,
                   ),
                   onTap:(){
                     Navigator.of(context).pushReplacementNamed("/register");
@@ -148,7 +148,7 @@ class _login_pageState extends State<login_page> {
             ],
           ),
       ),
-      backgroundColor: Color.fromRGBO(51,51,51,1),
+      backgroundColor: const Color.fromRGBO(51,51,51,1),
     );
   }
 }
