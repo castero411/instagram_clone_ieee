@@ -30,16 +30,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState(){
-    FirebaseAuth.instance.authStateChanges().listen((User? user){
-      if(user == null){
-        print("User is currently signed out!");
-        index=0;
-      }
-      else{
-        print("user is currently signed in!");
-        index=1;
-      }
-    });
+    FirebaseAuth.instance.authStateChanges().listen((User? user){});
 
     super.initState();
   }
@@ -53,9 +44,9 @@ class _MyAppState extends State<MyApp> {
 
         routes: {
 
-          "/register":(context) => register_page(),
-          "/login":(context)=> login_page(),
-          "/homePage":(context)=> home_page(),
+          "/register":(context) => const register_page(),
+          "/login":(context)=> const login_page(),
+          "/homePage":(context)=> const home_page(),
         });
   }
 }
