@@ -17,14 +17,14 @@ class _search_pageState extends State<search_page> {
   void initState() {
     super.initState();
 
-    // Initialize connectivity and listen for changes
+
     Connectivity().onConnectivityChanged.listen((ConnectivityResult result) {
       setState(() {
         _connectivityResult = result;
       });
     });
 
-    // Get the initial network state
+
     Connectivity().checkConnectivity().then((ConnectivityResult result) {
       setState(() {
         _connectivityResult = result;
